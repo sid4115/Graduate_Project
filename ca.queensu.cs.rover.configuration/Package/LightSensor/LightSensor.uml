@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:UMLRTStateMachines="http://www.eclipse.org/papyrus/umlrt/statemachine" xmlns:UMLRealTime="http://www.eclipse.org/papyrus/umlrt" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Package xmi:id="_lB6b8K6_Eee4O9DhtUkFUQ" name="LightSensor">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_lB6b8a6_Eee4O9DhtUkFUQ" source="http://www.eclipse.org/papyrus-rt/language/1.0.0">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_lB6b8q6_Eee4O9DhtUkFUQ" key="language" value="umlrt-cpp"/>
+    </eAnnotations>
+    <packagedElement xmi:type="uml:Package" xmi:id="_oHHSUK6_Eee4O9DhtUkFUQ" name="lightSensing">
+      <packagedElement xmi:type="uml:Collaboration" xmi:id="_oFCOsK6_Eee4O9DhtUkFUQ" name="lightSensing">
+        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_oHMK0K6_Eee4O9DhtUkFUQ" client="_oFCOsK6_Eee4O9DhtUkFUQ" supplier="_oHJukK6_Eee4O9DhtUkFUQ" contract="_oHJukK6_Eee4O9DhtUkFUQ"/>
+        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_oHUtsK6_Eee4O9DhtUkFUQ" client="_oFCOsK6_Eee4O9DhtUkFUQ" supplier="_oHS4gq6_Eee4O9DhtUkFUQ" contract="_oHS4gq6_Eee4O9DhtUkFUQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_oHJukK6_Eee4O9DhtUkFUQ" name="lightSensing">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_VkkSQK7BEee4O9DhtUkFUQ" name="lightIntensityValue">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_wAsy0K7BEee4O9DhtUkFUQ" name="lightValue">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_oHRDUK6_Eee4O9DhtUkFUQ" name="lightSensing~">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_Kl6zYK7BEee4O9DhtUkFUQ" name="detectLightIntensity"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_Qkhf0K7BEee4O9DhtUkFUQ" name="stopDetectingLightIntensity"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_oHS4gK6_Eee4O9DhtUkFUQ" client="_oFCOsK6_Eee4O9DhtUkFUQ" supplier="_oHRDUK6_Eee4O9DhtUkFUQ"/>
+      <packagedElement xmi:type="uml:AnyReceiveEvent" xmi:id="_oHS4ga6_Eee4O9DhtUkFUQ" name="*"/>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_oHS4gq6_Eee4O9DhtUkFUQ" name="lightSensingIO"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_oHUtsa6_Eee4O9DhtUkFUQ" client="_oFCOsK6_Eee4O9DhtUkFUQ" supplier="_oHS4gq6_Eee4O9DhtUkFUQ"/>
+      <packagedElement xmi:type="uml:CallEvent" xmi:id="_KmFygK7BEee4O9DhtUkFUQ" operation="_Kl6zYK7BEee4O9DhtUkFUQ"/>
+      <packagedElement xmi:type="uml:CallEvent" xmi:id="_QkiG4K7BEee4O9DhtUkFUQ" operation="_Qkhf0K7BEee4O9DhtUkFUQ"/>
+      <packagedElement xmi:type="uml:CallEvent" xmi:id="_VkpKwK7BEee4O9DhtUkFUQ" operation="_VkkSQK7BEee4O9DhtUkFUQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_sytewK6_Eee4O9DhtUkFUQ" name="lightSensor" classifierBehavior="_AUGTYK7DEee4O9DhtUkFUQ" isActive="true">
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_A3ABkK7CEee4O9DhtUkFUQ" name="timing" visibility="protected" isOrdered="true" aggregation="composite" isBehavior="true" isService="false">
+        <type xmi:type="uml:Collaboration" href="pathmap://UMLRTRTSLIB/UMLRT-RTS.uml#_MxQZgGXsEeS_4daqvwyFrg"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_B1QZkK7CEee4O9DhtUkFUQ" name="log" visibility="protected" isOrdered="true" aggregation="composite" isBehavior="true" isService="false">
+        <type xmi:type="uml:Collaboration" href="pathmap://UMLRTRTSLIB/UMLRT-RTS.uml#_6kIb0IeXEeSVyrlWP4nYew"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_DoXV8K7CEee4O9DhtUkFUQ" name="lightSensing" visibility="public" type="_oFCOsK6_Eee4O9DhtUkFUQ" isOrdered="true" aggregation="composite" isBehavior="true" isConjugated="true" isService="true"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_m_PEcK7kEeeE8pdumv3XjQ" name="lightSensorPin" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_NRCtkNL3Eeez2Pnj8VbWZQ" value="12"/>
+      </ownedAttribute>
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_AUGTYK7DEee4O9DhtUkFUQ" name="LightSensorStateMachine" isReentrant="false">
+        <region xmi:type="uml:Region" xmi:id="_AUswUK7DEee4O9DhtUkFUQ" name="Region">
+          <transition xmi:type="uml:Transition" xmi:id="_AUzeAK7DEee4O9DhtUkFUQ" name="Initial" source="_AUvMkK7DEee4O9DhtUkFUQ" target="_AUxo0K7DEee4O9DhtUkFUQ"/>
+          <transition xmi:type="uml:Transition" xmi:id="_ZJ308K7VEee4O9DhtUkFUQ" name="" kind="external" source="_AUxo0K7DEee4O9DhtUkFUQ" target="_MDzWkK7VEee4O9DhtUkFUQ">
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_yWgYUK7cEee4O9DhtUkFUQ">
+              <language>C++</language>
+              <body>log.show(&quot;Start detecting Light Intensity\n&quot;);</body>
+            </effect>
+            <trigger xmi:type="uml:Trigger" xmi:id="_ne4LoK7VEee4O9DhtUkFUQ" name="detectLightIntensity" event="_KmFygK7BEee4O9DhtUkFUQ" port="_DoXV8K7CEee4O9DhtUkFUQ"/>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_gZe2QK7VEee4O9DhtUkFUQ" name="" kind="external" source="_MDzWkK7VEee4O9DhtUkFUQ" target="_AUxo0K7DEee4O9DhtUkFUQ">
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_kCHMAK7kEeeE8pdumv3XjQ">
+              <language>C++</language>
+              <body>log.show(&quot;Start detecting Light Intensity\n&quot;);</body>
+            </effect>
+            <trigger xmi:type="uml:Trigger" xmi:id="_yuYxAK7VEee4O9DhtUkFUQ" name="Stop" event="_QkiG4K7BEee4O9DhtUkFUQ" port="_DoXV8K7CEee4O9DhtUkFUQ"/>
+          </transition>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_AUvMkK7DEee4O9DhtUkFUQ" kind="initial"/>
+          <subvertex xmi:type="uml:State" xmi:id="_AUxo0K7DEee4O9DhtUkFUQ" name="idle">
+            <entry xmi:type="uml:OpaqueBehavior" xmi:id="_2mvecK7cEee4O9DhtUkFUQ">
+              <language>C++</language>
+              <body>log.show(&quot;In Idle state\n&quot;);</body>
+            </entry>
+          </subvertex>
+          <subvertex xmi:type="uml:State" xmi:id="_MDzWkK7VEee4O9DhtUkFUQ" name="Active">
+            <entry xmi:type="uml:OpaqueBehavior" xmi:id="_fmuuMK7WEee4O9DhtUkFUQ" name="Entry">
+              <language>C++</language>
+              <body>wiringPiSetup();&#xD;
+int res = 0;&#xD;
+&#xD;
+pinMode(lightSensorPin, OUTPUT);&#xD;
+digitalWrite(lightSensorPin, LOW);&#xD;
+delayMicroseconds(10);&#xD;
+&#xD;
+//Change the pin back to input&#xD;
+pinMode(lightSensorPin, INPUT);&#xD;
+&#xD;
+//Count until the pin goes high&#xD;
+&#xD;
+while (digitalRead(lightSensorPin) == LOW)&#xD;
+{&#xD;
+        res = res + 1;&#xD;
+}&#xD;
+&#xD;
+lightSensing.lightIntensityValue(res).send();&#xD;
+</body>
+            </entry>
+          </subvertex>
+        </region>
+      </ownedBehavior>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_lB6b866_Eee4O9DhtUkFUQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_lB6b9K6_Eee4O9DhtUkFUQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/umlrt#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_RT_PROFILE/uml-rt.profile.uml#_1h74oEeVEeO0lv5O1DTHOQ"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_lB6b9a6_Eee4O9DhtUkFUQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_lB6b9q6_Eee4O9DhtUkFUQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/umlrt/statemachine#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_RT_PROFILE/UMLRealTimeSM-addendum.profile.uml#_KLcn0FDtEeOA4ecmvfqvaw"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_lB6b966_Eee4O9DhtUkFUQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_lB6b-K6_Eee4O9DhtUkFUQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/umlrt/cppproperties#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UMLRT_CPP/RTCppProperties.profile.uml#_vl5LALs8EeSTjNEQkASznQ"/>
+    </profileApplication>
+  </uml:Package>
+  <UMLRealTime:ProtocolContainer xmi:id="_oHIgcK6_Eee4O9DhtUkFUQ" base_Package="_oHHSUK6_Eee4O9DhtUkFUQ"/>
+  <UMLRealTime:RTMessageSet xmi:id="_oHK8sK6_Eee4O9DhtUkFUQ" base_Interface="_oHJukK6_Eee4O9DhtUkFUQ"/>
+  <UMLRealTime:RTMessageSet xmi:id="_oHSRcK6_Eee4O9DhtUkFUQ" base_Interface="_oHRDUK6_Eee4O9DhtUkFUQ" rtMsgKind="out"/>
+  <UMLRealTime:RTMessageSet xmi:id="_oHUGoK6_Eee4O9DhtUkFUQ" base_Interface="_oHS4gq6_Eee4O9DhtUkFUQ" rtMsgKind="inOut"/>
+  <UMLRealTime:Protocol xmi:id="_oHUtsq6_Eee4O9DhtUkFUQ" base_Collaboration="_oFCOsK6_Eee4O9DhtUkFUQ"/>
+  <UMLRealTime:Capsule xmi:id="_sy-kgK6_Eee4O9DhtUkFUQ" base_Class="_sytewK6_Eee4O9DhtUkFUQ"/>
+  <UMLRealTime:RTPort xmi:id="_A3Cd0K7CEee4O9DhtUkFUQ" isPublish="false" isWired="false" base_Port="_A3ABkK7CEee4O9DhtUkFUQ"/>
+  <UMLRealTime:RTPort xmi:id="_B1SOwK7CEee4O9DhtUkFUQ" isPublish="false" isWired="false" base_Port="_B1QZkK7CEee4O9DhtUkFUQ"/>
+  <UMLRealTime:RTPort xmi:id="_DoYkEK7CEee4O9DhtUkFUQ" isPublish="false" isWired="true" base_Port="_DoXV8K7CEee4O9DhtUkFUQ"/>
+  <UMLRTStateMachines:RTPseudostate xmi:id="_AUxBwK7DEee4O9DhtUkFUQ" base_Pseudostate="_AUvMkK7DEee4O9DhtUkFUQ"/>
+  <UMLRTStateMachines:RTState xmi:id="_AUy28K7DEee4O9DhtUkFUQ" base_State="_AUxo0K7DEee4O9DhtUkFUQ"/>
+  <UMLRTStateMachines:RTRegion xmi:id="_AUzeAa7DEee4O9DhtUkFUQ" base_Region="_AUswUK7DEee4O9DhtUkFUQ"/>
+  <UMLRTStateMachines:RTStateMachine xmi:id="_AU4WgK7DEee4O9DhtUkFUQ" base_StateMachine="_AUGTYK7DEee4O9DhtUkFUQ"/>
+  <UMLRTStateMachines:RTState xmi:id="_MD1y0K7VEee4O9DhtUkFUQ" base_State="_MDzWkK7VEee4O9DhtUkFUQ"/>
+</xmi:XMI>

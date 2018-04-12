@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:UMLRTStateMachines="http://www.eclipse.org/papyrus/umlrt/statemachine" xmlns:UMLRealTime="http://www.eclipse.org/papyrus/umlrt" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Model xmi:id="_ZYRinTqHEeexdPNOK7yxvQ" name="rover">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ZYRinjqHEeexdPNOK7yxvQ" source="http://www.eclipse.org/papyrus-rt/language/1.0.0">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ZYRinzqHEeexdPNOK7yxvQ" key="language" value="umlrt-cpp"/>
+    </eAnnotations>
+    <packagedElement xmi:type="uml:Package" xmi:id="_eP9CQDqHEeexdPNOK7yxvQ" name="UMLRT-Rover">
+      <packagedElement xmi:type="uml:Class" xmi:id="_R5UgoMl9Eeeh_es-DMBk6A" name="rover" isActive="true"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_0GkwQDqHEeexdPNOK7yxvQ" name="Top" isActive="true">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="__ZufgDqHEeexdPNOK7yxvQ" name="controlSoftware" visibility="protected" type="_1T0mgDqHEeexdPNOK7yxvQ" isOrdered="true" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_AlZBYDqIEeexdPNOK7yxvQ" name="rover" visibility="protected" type="_R5UgoMl9Eeeh_es-DMBk6A" isOrdered="true" aggregation="composite"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_1T0mgDqHEeexdPNOK7yxvQ" name="ControlSoftware" classifierBehavior="_fNTgcDs5EeexdPNOK7yxvQ" isActive="true">
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_ESI_8DqIEeexdPNOK7yxvQ" name="log" visibility="protected" isOrdered="true" aggregation="composite" isBehavior="true" isService="false">
+        <type xmi:type="uml:Collaboration" href="pathmap://UMLRTRTSLIB/UMLRT-RTS.uml#_6kIb0IeXEeSVyrlWP4nYew"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_Fz8J4DqIEeexdPNOK7yxvQ" name="timer" visibility="protected" isOrdered="true" aggregation="composite" isBehavior="true" isService="false">
+        <type xmi:type="uml:Collaboration" href="pathmap://UMLRTRTSLIB/UMLRT-RTS.uml#_MxQZgGXsEeS_4daqvwyFrg"/>
+      </ownedAttribute>
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_fNTgcDs5EeexdPNOK7yxvQ" name="ControlSoftwareStateMachine" isReentrant="false">
+        <region xmi:type="uml:Region" xmi:id="_fNnpgDs5EeexdPNOK7yxvQ" name="Region"/>
+      </ownedBehavior>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_ZYRioDqHEeexdPNOK7yxvQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ZYRioTqHEeexdPNOK7yxvQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/umlrt#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_RT_PROFILE/uml-rt.profile.uml#_1h74oEeVEeO0lv5O1DTHOQ"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_ZYRiojqHEeexdPNOK7yxvQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ZYRiozqHEeexdPNOK7yxvQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/umlrt/statemachine#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_RT_PROFILE/UMLRealTimeSM-addendum.profile.uml#_KLcn0FDtEeOA4ecmvfqvaw"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_ZYRipDqHEeexdPNOK7yxvQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ZYRipTqHEeexdPNOK7yxvQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/umlrt/cppproperties#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UMLRT_CPP/RTCppProperties.profile.uml#_vl5LALs8EeSTjNEQkASznQ"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_mam5MGAbEeeExrR6Q0uPcw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_mam5MWAbEeeExrR6Q0uPcw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+    </profileApplication>
+  </uml:Model>
+  <UMLRealTime:Capsule xmi:id="_0IolzDqHEeexdPNOK7yxvQ" base_Class="_0GkwQDqHEeexdPNOK7yxvQ"/>
+  <UMLRealTime:Capsule xmi:id="_1ULL3DqHEeexdPNOK7yxvQ" base_Class="_1T0mgDqHEeexdPNOK7yxvQ"/>
+  <UMLRealTime:CapsulePart xmi:id="__Z4QgDqHEeexdPNOK7yxvQ" base_Property="__ZufgDqHEeexdPNOK7yxvQ"/>
+  <UMLRealTime:CapsulePart xmi:id="_AlZBYTqIEeexdPNOK7yxvQ" base_Property="_AlZBYDqIEeexdPNOK7yxvQ"/>
+  <UMLRealTime:RTPort xmi:id="_ESI_8TqIEeexdPNOK7yxvQ" isWired="false" base_Port="_ESI_8DqIEeexdPNOK7yxvQ"/>
+  <UMLRealTime:RTPort xmi:id="_Fz8J4TqIEeexdPNOK7yxvQ" isWired="false" base_Port="_Fz8J4DqIEeexdPNOK7yxvQ"/>
+  <UMLRTStateMachines:RTRegion xmi:id="_fNvlUDs5EeexdPNOK7yxvQ" base_Region="_fNnpgDs5EeexdPNOK7yxvQ"/>
+  <UMLRTStateMachines:RTStateMachine xmi:id="_fPG3QDs5EeexdPNOK7yxvQ" base_StateMachine="_fNTgcDs5EeexdPNOK7yxvQ"/>
+  <UMLRealTime:Capsule xmi:id="_SKPRgMl9Eeeh_es-DMBk6A" base_Class="_R5UgoMl9Eeeh_es-DMBk6A"/>
+</xmi:XMI>

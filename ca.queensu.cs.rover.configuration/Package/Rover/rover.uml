@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:UMLRTStateMachines="http://www.eclipse.org/papyrus/umlrt/statemachine" xmlns:UMLRealTime="http://www.eclipse.org/papyrus/umlrt" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Model xmi:id="_ZYRinTqHEeexdPNOK7yxvQ" name="rover">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ZYRinjqHEeexdPNOK7yxvQ" source="http://www.eclipse.org/papyrus-rt/language/1.0.0">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ZYRinzqHEeexdPNOK7yxvQ" key="language" value="umlrt-cpp"/>
+    </eAnnotations>
+    <packagedElement xmi:type="uml:Package" xmi:id="_eP9CQDqHEeexdPNOK7yxvQ" name="UMLRT-Rover">
+      <packagedElement xmi:type="uml:Class" xmi:id="_4qJpIDqHEeexdPNOK7yxvQ" name="Rover" isActive="true">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_hIBUYKiMEee4O9DhtUkFUQ" name="cameraSensor" visibility="protected" isOrdered="true" aggregation="composite">
+          <type xmi:type="uml:Class" href="../Camera/Camera.uml#_BfeYwJ5ZEeeixtfOAUlJBw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_i53sgKiMEee4O9DhtUkFUQ" name="detectionSensor" visibility="protected" isOrdered="true" aggregation="composite">
+          <type xmi:type="uml:Class" href="../DetectionSensor/DetectionSensor.uml#_I9NX0Jv3EeeixtfOAUlJBw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_koLocKiMEee4O9DhtUkFUQ" name="engineController" visibility="protected" isOrdered="true" aggregation="composite">
+          <type xmi:type="uml:Class" href="../EngineController/EngineController.uml#_lr4Q0Jv5EeeixtfOAUlJBw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_mbTy8KiMEee4O9DhtUkFUQ" name="lineSensor" visibility="protected" isOrdered="true" aggregation="composite">
+          <type xmi:type="uml:Class" href="../LineFollower/LineFollower.uml#_KvV4QJwBEeeixtfOAUlJBw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_rXeyAKiMEee4O9DhtUkFUQ" name="cameraSensing" visibility="public" isOrdered="true" aggregation="composite" isBehavior="false" isConjugated="true" isService="true">
+          <type xmi:type="uml:Collaboration" href="../Camera/Camera.uml#_6PI-sJ5YEeeixtfOAUlJBw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_wD1MYKiMEee4O9DhtUkFUQ" name="detection" visibility="public" isOrdered="true" aggregation="composite" isBehavior="false" isConjugated="true" isService="true">
+          <type xmi:type="uml:Collaboration" href="../DetectionSensor/DetectionSensor.uml#_I9P0EZv3EeeixtfOAUlJBw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_1ABZkKiMEee4O9DhtUkFUQ" name="engine" visibility="public" isOrdered="true" aggregation="composite" isBehavior="false" isConjugated="true" isService="true">
+          <type xmi:type="uml:Collaboration" href="../EngineController/EngineController.uml#_lr6tEZv5EeeixtfOAUlJBw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_3YOAAKiMEee4O9DhtUkFUQ" name="lineDetection" visibility="public" isOrdered="true" aggregation="composite" isBehavior="false" isConjugated="true" isService="true">
+          <type xmi:type="uml:Collaboration" href="../LineFollower/LineFollower.uml#_KvXtcZwBEeeixtfOAUlJBw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Qb3IsK7lEeeE8pdumv3XjQ" name="lightSensor" visibility="protected" isOrdered="true" aggregation="composite">
+          <type xmi:type="uml:Class" href="../LightSensor/LightSensor.uml#_sytewK6_Eee4O9DhtUkFUQ"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_XIZSIK7lEeeE8pdumv3XjQ" name="lightSensing" visibility="public" isOrdered="true" aggregation="composite" isBehavior="false" isConjugated="true" isService="true">
+          <type xmi:type="uml:Collaboration" href="../LightSensor/LightSensor.uml#_oFCOsK6_Eee4O9DhtUkFUQ"/>
+        </ownedAttribute>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_LLbkcKiQEee4O9DhtUkFUQ" name="RTConnector1">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_LLdZoKiQEee4O9DhtUkFUQ" role="_rXeyAKiMEee4O9DhtUkFUQ"/>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_LLdZoaiQEee4O9DhtUkFUQ" partWithPort="_hIBUYKiMEee4O9DhtUkFUQ">
+            <role xmi:type="uml:Port" href="../Camera/Camera.uml#_LARkIJ5aEeeixtfOAUlJBw"/>
+          </end>
+        </ownedConnector>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_MEWJcKiQEee4O9DhtUkFUQ" name="RTConnector2">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_MEX-oKiQEee4O9DhtUkFUQ" role="_wD1MYKiMEee4O9DhtUkFUQ"/>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_MEX-oaiQEee4O9DhtUkFUQ" partWithPort="_i53sgKiMEee4O9DhtUkFUQ">
+            <role xmi:type="uml:Port" href="../DetectionSensor/DetectionSensor.uml#_I9NX2Zv3EeeixtfOAUlJBw"/>
+          </end>
+        </ownedConnector>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_MzMMcKiQEee4O9DhtUkFUQ" name="RTConnector3">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_MzNakKiQEee4O9DhtUkFUQ" role="_1ABZkKiMEee4O9DhtUkFUQ"/>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_MzNakaiQEee4O9DhtUkFUQ" partWithPort="_koLocKiMEee4O9DhtUkFUQ">
+            <role xmi:type="uml:Port" href="../EngineController/EngineController.uml#_lr4Q4Zv5EeeixtfOAUlJBw"/>
+          </end>
+        </ownedConnector>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_Nn1VcKiQEee4O9DhtUkFUQ" name="RTConnector4">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_Nn3KoKiQEee4O9DhtUkFUQ" role="_3YOAAKiMEee4O9DhtUkFUQ"/>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_Nn3KoaiQEee4O9DhtUkFUQ" partWithPort="_mbTy8KiMEee4O9DhtUkFUQ">
+            <role xmi:type="uml:Port" href="../LineFollower/LineFollower.uml#_KvV4T5wBEeeixtfOAUlJBw"/>
+          </end>
+        </ownedConnector>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_Z_1ZUK7lEeeE8pdumv3XjQ" name="RTConnector5">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_Z_4coK7lEeeE8pdumv3XjQ" role="_XIZSIK7lEeeE8pdumv3XjQ"/>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_Z_4coa7lEeeE8pdumv3XjQ" partWithPort="_Qb3IsK7lEeeE8pdumv3XjQ">
+            <role xmi:type="uml:Port" href="../LightSensor/LightSensor.uml#_DoXV8K7CEee4O9DhtUkFUQ"/>
+          </end>
+        </ownedConnector>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_H8M24TqIEeexdPNOK7yxvQ" name="Engine">
+        <packagedElement xmi:type="uml:Interface" xmi:id="_H8M24zqIEeexdPNOK7yxvQ" name="Engine">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_ZLM5gDqIEeexdPNOK7yxvQ" name="stopped"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_aR8fIDqIEeexdPNOK7yxvQ" name="turnedLeft"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_b_3ZgDqIEeexdPNOK7yxvQ" name="turnedRight"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_H8Wn4TqIEeexdPNOK7yxvQ" name="Engine~">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_JyTc4DqIEeexdPNOK7yxvQ" name="moveForward"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_LUxVMDqIEeexdPNOK7yxvQ" name="moveBackward"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_MkwWYDqIEeexdPNOK7yxvQ" name="stop"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_OSBJcDqIEeexdPNOK7yxvQ" name="turnLeftSpeed">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_UhIXEDqIEeexdPNOK7yxvQ" name="angle">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_VbkmEDqIEeexdPNOK7yxvQ" name="turnRightSpeed">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_YUCA8DqIEeexdPNOK7yxvQ" name="angle">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_fiys0GAbEeeExrR6Q0uPcw" name="turnSpeed">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_ttXVIGAbEeeExrR6Q0uPcw" name="speedChecker">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:AnyReceiveEvent" xmi:id="_H8Wn5DqIEeexdPNOK7yxvQ" name="*"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_H8Wn5TqIEeexdPNOK7yxvQ" name="EngineIO"/>
+        <packagedElement xmi:type="uml:CallEvent" xmi:id="_JyTc4TqIEeexdPNOK7yxvQ" operation="_JyTc4DqIEeexdPNOK7yxvQ"/>
+        <packagedElement xmi:type="uml:CallEvent" xmi:id="_LUxVMTqIEeexdPNOK7yxvQ" operation="_LUxVMDqIEeexdPNOK7yxvQ"/>
+        <packagedElement xmi:type="uml:CallEvent" xmi:id="_MkwWYTqIEeexdPNOK7yxvQ" operation="_MkwWYDqIEeexdPNOK7yxvQ"/>
+        <packagedElement xmi:type="uml:CallEvent" xmi:id="_OSK6cDqIEeexdPNOK7yxvQ" operation="_OSBJcDqIEeexdPNOK7yxvQ"/>
+        <packagedElement xmi:type="uml:CallEvent" xmi:id="_VbkmETqIEeexdPNOK7yxvQ" operation="_VbkmEDqIEeexdPNOK7yxvQ"/>
+        <packagedElement xmi:type="uml:CallEvent" xmi:id="_ZLM5gTqIEeexdPNOK7yxvQ" operation="_ZLM5gDqIEeexdPNOK7yxvQ"/>
+        <packagedElement xmi:type="uml:CallEvent" xmi:id="_aR8fITqIEeexdPNOK7yxvQ" operation="_aR8fIDqIEeexdPNOK7yxvQ"/>
+        <packagedElement xmi:type="uml:CallEvent" xmi:id="_cAAjcDqIEeexdPNOK7yxvQ" operation="_b_3ZgDqIEeexdPNOK7yxvQ"/>
+        <packagedElement xmi:type="uml:CallEvent" xmi:id="_fi72wGAbEeeExrR6Q0uPcw" operation="_fiys0GAbEeeExrR6Q0uPcw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_astsEDvnEeexdPNOK7yxvQ" name="Detection">
+        <packagedElement xmi:type="uml:Interface" xmi:id="_astsEjvnEeexdPNOK7yxvQ" name="Detection">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_nzD3QDvnEeexdPNOK7yxvQ" name="obstacleDetected">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_uaQ0wDvnEeexdPNOK7yxvQ" name="distance">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_astsFTvnEeexdPNOK7yxvQ" name="Detection~">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iXEvsDvnEeexdPNOK7yxvQ" name="startDetection"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_kOj1wDvnEeexdPNOK7yxvQ" name="stopDetection"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:AnyReceiveEvent" xmi:id="_astsGDvnEeexdPNOK7yxvQ" name="*"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_astsGTvnEeexdPNOK7yxvQ" name="DetectionIO"/>
+        <packagedElement xmi:type="uml:CallEvent" xmi:id="_iXEvsTvnEeexdPNOK7yxvQ" operation="_iXEvsDvnEeexdPNOK7yxvQ"/>
+        <packagedElement xmi:type="uml:CallEvent" xmi:id="_kOj1wTvnEeexdPNOK7yxvQ" operation="_kOj1wDvnEeexdPNOK7yxvQ"/>
+        <packagedElement xmi:type="uml:CallEvent" xmi:id="_nzD3QTvnEeexdPNOK7yxvQ" operation="_nzD3QDvnEeexdPNOK7yxvQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_Nl79kFqoEeerLcIyzb-eNw" name="LineDetection">
+        <packagedElement xmi:type="uml:Interface" xmi:id="_Nm0uYFqoEeerLcIyzb-eNw" name="LineDetection">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_OmGlUGDjEeeExrR6Q0uPcw" name="lineSensed">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_UguwsGDjEeeExrR6Q0uPcw" name="lineSenseData">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_NnAUkFqoEeerLcIyzb-eNw" name="LineDetection~">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_GtpbUGDjEeeExrR6Q0uPcw" name="startLineSense"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_JuA1AGDjEeeExrR6Q0uPcw" name="stopLineSensing"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:AnyReceiveEvent" xmi:id="_NnHpUFqoEeerLcIyzb-eNw" name="*"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_NnKFkFqoEeerLcIyzb-eNw" name="LineDetectionIO"/>
+        <packagedElement xmi:type="uml:CallEvent" xmi:id="_GtpbUWDjEeeExrR6Q0uPcw" operation="_GtpbUGDjEeeExrR6Q0uPcw"/>
+        <packagedElement xmi:type="uml:CallEvent" xmi:id="_JuA1AWDjEeeExrR6Q0uPcw" operation="_JuA1AGDjEeeExrR6Q0uPcw"/>
+        <packagedElement xmi:type="uml:CallEvent" xmi:id="_OmGlUWDjEeeExrR6Q0uPcw" operation="_OmGlUGDjEeeExrR6Q0uPcw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Model" href="../Camera/Camera.uml#_2bd4wJ5YEeeixtfOAUlJBw"/>
+      <packagedElement xmi:type="uml:Model" href="../DetectionSensor/DetectionSensor.uml#_5KogQFTDEeeM_e9uzN7ElA"/>
+      <packagedElement xmi:type="uml:Model" href="../EngineController/EngineController.uml#_m26I4FTREeeM_e9uzN7ElA"/>
+      <packagedElement xmi:type="uml:Model" href="../LineFollower/LineFollower.uml#_m26I4FTREeeM_e9uzN7ElA"/>
+      <packagedElement xmi:type="uml:Model" href="../LightSensor/LightSensor.uml#_lB6b8K6_Eee4O9DhtUkFUQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_0GkwQDqHEeexdPNOK7yxvQ" name="Top" isActive="true">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="__ZufgDqHEeexdPNOK7yxvQ" name="controlSoftware" visibility="protected" type="_1T0mgDqHEeexdPNOK7yxvQ" isOrdered="true" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_wrbicKiNEee4O9DhtUkFUQ" name="rover" visibility="protected" type="_4qJpIDqHEeexdPNOK7yxvQ" isOrdered="true" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_GWkTsK7lEeeE8pdumv3XjQ" name="lightSensing" visibility="public" isOrdered="true" aggregation="composite" isBehavior="false" isConjugated="true" isService="true">
+        <type xmi:type="uml:Collaboration" href="../LightSensor/LightSensor.uml#_oFCOsK6_Eee4O9DhtUkFUQ"/>
+      </ownedAttribute>
+      <ownedConnector xmi:type="uml:Connector" xmi:id="_ksEYAKiOEee4O9DhtUkFUQ" name="RTConnector1">
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_ksG0QKiOEee4O9DhtUkFUQ" partWithPort="__ZufgDqHEeexdPNOK7yxvQ" role="_cJLJ4KiOEee4O9DhtUkFUQ"/>
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_ksG0QaiOEee4O9DhtUkFUQ" partWithPort="_wrbicKiNEee4O9DhtUkFUQ" role="_rXeyAKiMEee4O9DhtUkFUQ"/>
+      </ownedConnector>
+      <ownedConnector xmi:type="uml:Connector" xmi:id="_laEGcKiOEee4O9DhtUkFUQ" name="RTConnector2">
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_laF7oKiOEee4O9DhtUkFUQ" partWithPort="__ZufgDqHEeexdPNOK7yxvQ" role="_eMK8YKiOEee4O9DhtUkFUQ"/>
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_laF7oaiOEee4O9DhtUkFUQ" partWithPort="_wrbicKiNEee4O9DhtUkFUQ" role="_wD1MYKiMEee4O9DhtUkFUQ"/>
+      </ownedConnector>
+      <ownedConnector xmi:type="uml:Connector" xmi:id="_mPPa8KiOEee4O9DhtUkFUQ" name="RTConnector3">
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_mPRQIKiOEee4O9DhtUkFUQ" partWithPort="__ZufgDqHEeexdPNOK7yxvQ" role="_gngWYKiOEee4O9DhtUkFUQ"/>
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_mPR3MKiOEee4O9DhtUkFUQ" partWithPort="_wrbicKiNEee4O9DhtUkFUQ" role="_1ABZkKiMEee4O9DhtUkFUQ"/>
+      </ownedConnector>
+      <ownedConnector xmi:type="uml:Connector" xmi:id="_m17ngKiOEee4O9DhtUkFUQ" name="RTConnector4">
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_m181oKiOEee4O9DhtUkFUQ" partWithPort="__ZufgDqHEeexdPNOK7yxvQ" role="_iN-k8KiOEee4O9DhtUkFUQ"/>
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_m181oaiOEee4O9DhtUkFUQ" partWithPort="_wrbicKiNEee4O9DhtUkFUQ" role="_3YOAAKiMEee4O9DhtUkFUQ"/>
+      </ownedConnector>
+      <ownedConnector xmi:type="uml:Connector" xmi:id="_fyJWMK7lEeeE8pdumv3XjQ" name="RTConnector5">
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_fyLLYK7lEeeE8pdumv3XjQ" partWithPort="__ZufgDqHEeexdPNOK7yxvQ" role="_z-jakK7kEeeE8pdumv3XjQ"/>
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_fyLycK7lEeeE8pdumv3XjQ" partWithPort="_wrbicKiNEee4O9DhtUkFUQ" role="_XIZSIK7lEeeE8pdumv3XjQ"/>
+      </ownedConnector>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_1T0mgDqHEeexdPNOK7yxvQ" name="ControlSoftware" classifierBehavior="_fNTgcDs5EeexdPNOK7yxvQ" isActive="true">
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_ESI_8DqIEeexdPNOK7yxvQ" name="log" visibility="protected" isOrdered="true" aggregation="composite" isBehavior="true" isService="false">
+        <type xmi:type="uml:Collaboration" href="pathmap://UMLRTRTSLIB/UMLRT-RTS.uml#_6kIb0IeXEeSVyrlWP4nYew"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_Fz8J4DqIEeexdPNOK7yxvQ" name="timer" visibility="protected" isOrdered="true" aggregation="composite" isBehavior="true" isService="false">
+        <type xmi:type="uml:Collaboration" href="pathmap://UMLRTRTSLIB/UMLRT-RTS.uml#_MxQZgGXsEeS_4daqvwyFrg"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_PS3LADv_EeexdPNOK7yxvQ" name="threshold">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        <defaultValue xmi:type="uml:LiteralReal" xmi:id="_TYQTEDv_EeexdPNOK7yxvQ" value="30.0"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_cJLJ4KiOEee4O9DhtUkFUQ" name="cameraSensing" visibility="public" isOrdered="true" aggregation="composite" isBehavior="true" isConjugated="false" isService="true">
+        <type xmi:type="uml:Collaboration" href="../Camera/Camera.uml#_6PI-sJ5YEeeixtfOAUlJBw"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_eMK8YKiOEee4O9DhtUkFUQ" name="detection" visibility="public" isOrdered="true" aggregation="composite" isBehavior="true" isService="true">
+        <type xmi:type="uml:Collaboration" href="../DetectionSensor/DetectionSensor.uml#_I9P0EZv3EeeixtfOAUlJBw"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_gngWYKiOEee4O9DhtUkFUQ" name="engine" visibility="public" isOrdered="true" aggregation="composite" isBehavior="true" isService="true">
+        <type xmi:type="uml:Collaboration" href="../EngineController/EngineController.uml#_lr6tEZv5EeeixtfOAUlJBw"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_iN-k8KiOEee4O9DhtUkFUQ" name="lineDetection" visibility="public" isOrdered="true" aggregation="composite" isBehavior="true" isService="true">
+        <type xmi:type="uml:Collaboration" href="../LineFollower/LineFollower.uml#_KvXtcZwBEeeixtfOAUlJBw"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_G7MWgK3vEee4O9DhtUkFUQ" name="mode" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_z-jakK7kEeeE8pdumv3XjQ" name="lightSensing" visibility="public" isOrdered="true" aggregation="composite" isBehavior="true" isService="true">
+        <type xmi:type="uml:Collaboration" href="../LightSensor/LightSensor.uml#_oFCOsK6_Eee4O9DhtUkFUQ"/>
+      </ownedAttribute>
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_fNTgcDs5EeexdPNOK7yxvQ" name="ControlSoftwareStateMachine" isReentrant="false">
+        <region xmi:type="uml:Region" xmi:id="_fNnpgDs5EeexdPNOK7yxvQ" name="Region">
+          <transition xmi:type="uml:Transition" xmi:id="_0wqVoKiREee4O9DhtUkFUQ" kind="external" source="_S3fbwKiREee4O9DhtUkFUQ" target="_ah14UKiREee4O9DhtUkFUQ">
+            <trigger xmi:type="uml:Trigger" xmi:id="_5KbLMKiREee4O9DhtUkFUQ" name="Obstacle Detected" port="_eMK8YKiOEee4O9DhtUkFUQ">
+              <event xmi:type="uml:CallEvent" href="../DetectionSensor/DetectionSensor.uml#_I9QbJpv3EeeixtfOAUlJBw"/>
+            </trigger>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_-ATVAKiREee4O9DhtUkFUQ" name="Stopped" kind="external" source="_ah14UKiREee4O9DhtUkFUQ" target="_wO3lcKiREee4O9DhtUkFUQ">
+            <trigger xmi:type="uml:Trigger" xmi:id="_B3CWAKiSEee4O9DhtUkFUQ" name="stopped" port="_gngWYKiOEee4O9DhtUkFUQ">
+              <event xmi:type="uml:CallEvent" href="../EngineController/EngineController.uml#_lr6tKZv5EeeixtfOAUlJBw"/>
+            </trigger>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_rNEqEKiSEee4O9DhtUkFUQ" name="Timeout" kind="external" source="_wO3lcKiREee4O9DhtUkFUQ" target="_jUARgKiREee4O9DhtUkFUQ">
+            <trigger xmi:type="uml:Trigger" xmi:id="_usnTEKiSEee4O9DhtUkFUQ" name="timeout" port="_Fz8J4DqIEeexdPNOK7yxvQ">
+              <event xmi:type="uml:CallEvent" href="pathmap://UMLRTRTSLIB/UMLRT-RTS.uml#_IaEO8HDxEeSwWKwNKw1iAA"/>
+            </trigger>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_6Zfw8KiSEee4O9DhtUkFUQ" name="Timeout" kind="external" source="_jUARgKiREee4O9DhtUkFUQ" target="_fPJU8KiREee4O9DhtUkFUQ">
+            <trigger xmi:type="uml:Trigger" xmi:id="_9t0ocKiSEee4O9DhtUkFUQ" name="Timeout" port="_Fz8J4DqIEeexdPNOK7yxvQ">
+              <event xmi:type="uml:CallEvent" href="pathmap://UMLRTRTSLIB/UMLRT-RTS.uml#_IaEO8HDxEeSwWKwNKw1iAA"/>
+            </trigger>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_BkMdEKiTEee4O9DhtUkFUQ" name="Stopped" kind="external" source="_fPJU8KiREee4O9DhtUkFUQ" target="_tEnP8KiREee4O9DhtUkFUQ">
+            <trigger xmi:type="uml:Trigger" xmi:id="_EZnyEKiTEee4O9DhtUkFUQ" name="Stopped" port="_gngWYKiOEee4O9DhtUkFUQ">
+              <event xmi:type="uml:CallEvent" href="../EngineController/EngineController.uml#_lr6tKZv5EeeixtfOAUlJBw"/>
+            </trigger>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_N7BP0KiTEee4O9DhtUkFUQ" name="Timeout" kind="external" source="_tEnP8KiREee4O9DhtUkFUQ" target="_N6_aoKiTEee4O9DhtUkFUQ">
+            <trigger xmi:type="uml:Trigger" xmi:id="_RFH0UKiTEee4O9DhtUkFUQ" name="Timeout" port="_Fz8J4DqIEeexdPNOK7yxvQ">
+              <event xmi:type="uml:CallEvent" href="pathmap://UMLRTRTSLIB/UMLRT-RTS.uml#_IaEO8HDxEeSwWKwNKw1iAA"/>
+            </trigger>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_dSHVoaiTEee4O9DhtUkFUQ" name="Initial" kind="external" source="_fNpesDs5EeexdPNOK7yxvQ" target="_dSFgcKiTEee4O9DhtUkFUQ"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_fNpesDs5EeexdPNOK7yxvQ" name=""/>
+          <subvertex xmi:type="uml:State" xmi:id="_S3fbwKiREee4O9DhtUkFUQ" name="Moving Forward">
+            <connectionPoint xmi:type="uml:Pseudostate" xmi:id="_N6_aoKiTEee4O9DhtUkFUQ" kind="entryPoint"/>
+            <connectionPoint xmi:type="uml:Pseudostate" xmi:id="_dSFgcKiTEee4O9DhtUkFUQ" kind="entryPoint"/>
+            <region xmi:type="uml:Region" xmi:id="_TcRj0KiREee4O9DhtUkFUQ" name="Region1">
+              <transition xmi:type="uml:Transition" xmi:id="_Vn80YKiVEee4O9DhtUkFUQ" name="initial" kind="external" source="_1h3eMKiTEee4O9DhtUkFUQ" target="_STW3IKiVEee4O9DhtUkFUQ"/>
+              <transition xmi:type="uml:Transition" xmi:id="_BQiZ4KiWEee4O9DhtUkFUQ" name="lightSensing" kind="external" source="_STW3IKiVEee4O9DhtUkFUQ" target="_-9cV4KiVEee4O9DhtUkFUQ">
+                <trigger xmi:type="uml:Trigger" xmi:id="_gnroQK-vEeeE1e_iLgAxrA" name="lightValue" port="_z-jakK7kEeeE8pdumv3XjQ">
+                  <event xmi:type="uml:CallEvent" href="../LightSensor/LightSensor.uml#_VkpKwK7BEee4O9DhtUkFUQ"/>
+                </trigger>
+              </transition>
+              <transition xmi:type="uml:Transition" xmi:id="_oqqFUK3wEee4O9DhtUkFUQ" guard="_lST6kK4eEee4O9DhtUkFUQ" kind="external" source="_-9cV4KiVEee4O9DhtUkFUQ" target="_my9j4K3wEee4O9DhtUkFUQ">
+                <ownedRule xmi:type="uml:Constraint" xmi:id="_lST6kK4eEee4O9DhtUkFUQ">
+                  <specification xmi:type="uml:OpaqueExpression" xmi:id="_lST6ka4eEee4O9DhtUkFUQ">
+                    <language>C++</language>
+                    <body>return (mode ==0);</body>
+                  </specification>
+                </ownedRule>
+                <effect xmi:type="uml:OpaqueBehavior" xmi:id="_tnwToLBwEeeE1e_iLgAxrA">
+                  <language>C++</language>
+                  <body>lineDetection.startLineSense().send();</body>
+                </effect>
+              </transition>
+              <transition xmi:type="uml:Transition" xmi:id="_2QiFIa3wEee4O9DhtUkFUQ" name="" guard="_ggE6oK4eEee4O9DhtUkFUQ" kind="external" source="_-9cV4KiVEee4O9DhtUkFUQ" target="_0kAR4K3wEee4O9DhtUkFUQ">
+                <ownedRule xmi:type="uml:Constraint" xmi:id="_ggE6oK4eEee4O9DhtUkFUQ">
+                  <specification xmi:type="uml:OpaqueExpression" xmi:id="_ggE6oa4eEee4O9DhtUkFUQ">
+                    <language>C++</language>
+                    <body>return ((lightValue >100 &amp;&amp; lightValue &lt; 700)  &amp;&amp; (mode ==1));&#xD;
+   </body>
+                  </specification>
+                </ownedRule>
+                <effect xmi:type="uml:OpaqueBehavior" xmi:id="_UydpkK-2EeeE1e_iLgAxrA" name="Entry">
+                  <language>C++</language>
+                  <body>cameraSensing.startCameraSensing().send();</body>
+                </effect>
+              </transition>
+              <transition xmi:type="uml:Transition" xmi:id="_6g70cK4eEee4O9DhtUkFUQ" guard="_Wplt0K-3EeeE1e_iLgAxrA" kind="external" source="_0kAR4K3wEee4O9DhtUkFUQ" target="_bqAdAK3xEee4O9DhtUkFUQ">
+                <ownedRule xmi:type="uml:Constraint" xmi:id="_Wplt0K-3EeeE1e_iLgAxrA">
+                  <specification xmi:type="uml:OpaqueExpression" xmi:id="_Wplt0a-3EeeE1e_iLgAxrA">
+                    <language>C++</language>
+                    <body>return ( value  == true);</body>
+                  </specification>
+                </ownedRule>
+                <effect xmi:type="uml:OpaqueBehavior" xmi:id="_jJ4mkLBwEeeE1e_iLgAxrA">
+                  <language>C++</language>
+                  <body>lineDetection.stopSafeLineSense().send();</body>
+                </effect>
+                <trigger xmi:type="uml:Trigger" xmi:id="_nsN90K-2EeeE1e_iLgAxrA" name="StraightPath" port="_cJLJ4KiOEee4O9DhtUkFUQ">
+                  <event xmi:type="uml:CallEvent" href="../Camera/Camera.uml#_WHXCwJ5ZEeeixtfOAUlJBw"/>
+                </trigger>
+              </transition>
+              <transition xmi:type="uml:Transition" xmi:id="_76lvAK4eEee4O9DhtUkFUQ" guard="_1hvtwK-3EeeE1e_iLgAxrA" kind="external" source="_bqAdAK3xEee4O9DhtUkFUQ" target="_0kAR4K3wEee4O9DhtUkFUQ">
+                <ownedRule xmi:type="uml:Constraint" xmi:id="_1hvtwK-3EeeE1e_iLgAxrA">
+                  <specification xmi:type="uml:OpaqueExpression" xmi:id="_1hvtwa-3EeeE1e_iLgAxrA">
+                    <language>C++</language>
+                    <body>return !value;</body>
+                  </specification>
+                </ownedRule>
+                <effect xmi:type="uml:OpaqueBehavior" xmi:id="_aMyIsLBwEeeE1e_iLgAxrA">
+                  <language>C++</language>
+                  <body>lineDetection.stopFastLineSense().send();</body>
+                </effect>
+                <trigger xmi:type="uml:Trigger" xmi:id="_uLMW8K-3EeeE1e_iLgAxrA" name="curvedPath" port="_cJLJ4KiOEee4O9DhtUkFUQ">
+                  <event xmi:type="uml:CallEvent" href="../Camera/Camera.uml#_WHXCwJ5ZEeeixtfOAUlJBw"/>
+                </trigger>
+              </transition>
+              <transition xmi:type="uml:Transition" xmi:id="_cnOqgLLkEee2Mtole7l1kQ" kind="local" source="_N6_aoKiTEee4O9DhtUkFUQ" target="_STW3IKiVEee4O9DhtUkFUQ"/>
+              <transition xmi:type="uml:Transition" xmi:id="_eXJwALLkEee2Mtole7l1kQ" kind="local" source="_dSFgcKiTEee4O9DhtUkFUQ" target="_STW3IKiVEee4O9DhtUkFUQ"/>
+              <subvertex xmi:type="uml:Pseudostate" xmi:id="_1h3eMKiTEee4O9DhtUkFUQ" kind="initial"/>
+              <subvertex xmi:type="uml:State" xmi:id="_STW3IKiVEee4O9DhtUkFUQ" name="Initial">
+                <entry xmi:type="uml:OpaqueBehavior" xmi:id="_aelMIKiVEee4O9DhtUkFUQ" name="entry">
+                  <language>C++</language>
+                  <body>log.log (&quot;Moving forward\n&quot;);&#xD;
+engine.moveForward().send();&#xD;
+detection.startDetection().send();&#xD;
+lightSensing.detectLightIntensity().send();&#xD;
+timer.informIn(UMLRTTimespec(4,0));</body>
+                </entry>
+              </subvertex>
+              <subvertex xmi:type="uml:Pseudostate" xmi:id="_-9cV4KiVEee4O9DhtUkFUQ" name="Mode" kind="choice"/>
+              <subvertex xmi:type="uml:State" xmi:id="_my9j4K3wEee4O9DhtUkFUQ" name="Drive Energy Efficient">
+                <entry xmi:type="uml:OpaqueBehavior" xmi:id="_vmCPMK-1EeeE1e_iLgAxrA" name="entry">
+                  <language>C++</language>
+                  <body>log.log (&quot;In Energy Efficient Mode\n&quot;);</body>
+                </entry>
+              </subvertex>
+              <subvertex xmi:type="uml:State" xmi:id="_0kAR4K3wEee4O9DhtUkFUQ" name="Safe Drive">
+                <entry xmi:type="uml:FunctionBehavior" xmi:id="_2YmvMK-1EeeE1e_iLgAxrA" name="entry">
+                  <language>C++</language>
+                  <body>log.log (&quot;Safe Drive Mode \n&quot;);&#xD;
+lineDetection.safeLineSense().send();</body>
+                </entry>
+              </subvertex>
+              <subvertex xmi:type="uml:State" xmi:id="_bqAdAK3xEee4O9DhtUkFUQ" name="Fast Drive">
+                <entry xmi:type="uml:OpaqueBehavior" xmi:id="_69kvMK-1EeeE1e_iLgAxrA" name="entry">
+                  <language>C++</language>
+                  <body>log.log (&quot;Fast Drive Mode\n&quot;);&#xD;
+lineDetection.fastLineSense().send();</body>
+                </entry>
+              </subvertex>
+            </region>
+          </subvertex>
+          <subvertex xmi:type="uml:State" xmi:id="_ah14UKiREee4O9DhtUkFUQ" name="Stop Moving Forward"/>
+          <subvertex xmi:type="uml:State" xmi:id="_fPJU8KiREee4O9DhtUkFUQ" name="Stop Moving Forward"/>
+          <subvertex xmi:type="uml:State" xmi:id="_jUARgKiREee4O9DhtUkFUQ" name="Moving Backwards">
+            <entry xmi:type="uml:OpaqueBehavior" xmi:id="_1ktMQKiSEee4O9DhtUkFUQ" name="entry">
+              <language>C++</language>
+              <body>    log.log(&quot;**moving bacwards&quot;);&#xD;
+    engine.moveBackward().send();&#xD;
+    timer.informIn(UMLRTTimespec(1,0));</body>
+            </entry>
+          </subvertex>
+          <subvertex xmi:type="uml:State" xmi:id="_tEnP8KiREee4O9DhtUkFUQ" name="Time_Paused">
+            <entry xmi:type="uml:OpaqueBehavior" xmi:id="_LuCa4KiTEee4O9DhtUkFUQ" name="entry">
+              <language>C++</language>
+              <body> timer.informIn(UMLRTTimespec(2,0));</body>
+            </entry>
+          </subvertex>
+          <subvertex xmi:type="uml:State" xmi:id="_wO3lcKiREee4O9DhtUkFUQ" name="Time_Paused">
+            <entry xmi:type="uml:OpaqueBehavior" xmi:id="_pOA8YKiSEee4O9DhtUkFUQ" name="entry">
+              <language>C++</language>
+              <body> timer.informIn(UMLRTTimespec(2,0));</body>
+            </entry>
+          </subvertex>
+        </region>
+      </ownedBehavior>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_ZYRioDqHEeexdPNOK7yxvQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ZYRioTqHEeexdPNOK7yxvQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/umlrt#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_RT_PROFILE/uml-rt.profile.uml#_1h74oEeVEeO0lv5O1DTHOQ"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_ZYRiojqHEeexdPNOK7yxvQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ZYRiozqHEeexdPNOK7yxvQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/umlrt/statemachine#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_RT_PROFILE/UMLRealTimeSM-addendum.profile.uml#_KLcn0FDtEeOA4ecmvfqvaw"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_ZYRipDqHEeexdPNOK7yxvQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ZYRipTqHEeexdPNOK7yxvQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/umlrt/cppproperties#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UMLRT_CPP/RTCppProperties.profile.uml#_vl5LALs8EeSTjNEQkASznQ"/>
+    </profileApplication>
+  </uml:Model>
+  <UMLRealTime:Capsule xmi:id="_0IolzDqHEeexdPNOK7yxvQ" base_Class="_0GkwQDqHEeexdPNOK7yxvQ"/>
+  <UMLRealTime:Capsule xmi:id="_1ULL3DqHEeexdPNOK7yxvQ" base_Class="_1T0mgDqHEeexdPNOK7yxvQ"/>
+  <UMLRealTime:Capsule xmi:id="_4qmVFjqHEeexdPNOK7yxvQ" base_Class="_4qJpIDqHEeexdPNOK7yxvQ"/>
+  <UMLRealTime:CapsulePart xmi:id="__Z4QgDqHEeexdPNOK7yxvQ" base_Property="__ZufgDqHEeexdPNOK7yxvQ"/>
+  <UMLRealTime:RTPort xmi:id="_ESI_8TqIEeexdPNOK7yxvQ" isWired="false" base_Port="_ESI_8DqIEeexdPNOK7yxvQ"/>
+  <UMLRealTime:RTPort xmi:id="_Fz8J4TqIEeexdPNOK7yxvQ" isWired="false" base_Port="_Fz8J4DqIEeexdPNOK7yxvQ"/>
+  <UMLRealTime:ProtocolContainer xmi:id="_H8M24jqIEeexdPNOK7yxvQ" base_Package="_H8M24TqIEeexdPNOK7yxvQ"/>
+  <UMLRealTime:RTMessageSet xmi:id="_H8M25DqIEeexdPNOK7yxvQ" base_Interface="_H8M24zqIEeexdPNOK7yxvQ"/>
+  <UMLRealTime:RTMessageSet xmi:id="_H8Wn4jqIEeexdPNOK7yxvQ" base_Interface="_H8Wn4TqIEeexdPNOK7yxvQ" rtMsgKind="out"/>
+  <UMLRealTime:RTMessageSet xmi:id="_H8Wn5jqIEeexdPNOK7yxvQ" base_Interface="_H8Wn5TqIEeexdPNOK7yxvQ" rtMsgKind="inOut"/>
+  <UMLRTStateMachines:RTPseudostate xmi:id="_fNrT4Ds5EeexdPNOK7yxvQ" base_Pseudostate="_fNpesDs5EeexdPNOK7yxvQ"/>
+  <UMLRTStateMachines:RTRegion xmi:id="_fNvlUDs5EeexdPNOK7yxvQ" base_Region="_fNnpgDs5EeexdPNOK7yxvQ"/>
+  <UMLRTStateMachines:RTStateMachine xmi:id="_fPG3QDs5EeexdPNOK7yxvQ" base_StateMachine="_fNTgcDs5EeexdPNOK7yxvQ"/>
+  <UMLRealTime:ProtocolContainer xmi:id="_astsETvnEeexdPNOK7yxvQ" base_Package="_astsEDvnEeexdPNOK7yxvQ"/>
+  <UMLRealTime:RTMessageSet xmi:id="_astsEzvnEeexdPNOK7yxvQ" base_Interface="_astsEjvnEeexdPNOK7yxvQ"/>
+  <UMLRealTime:RTMessageSet xmi:id="_astsFjvnEeexdPNOK7yxvQ" base_Interface="_astsFTvnEeexdPNOK7yxvQ" rtMsgKind="out"/>
+  <UMLRealTime:RTMessageSet xmi:id="_astsGjvnEeexdPNOK7yxvQ" base_Interface="_astsGTvnEeexdPNOK7yxvQ" rtMsgKind="inOut"/>
+  <UMLRealTime:ProtocolContainer xmi:id="_NmA2EFqoEeerLcIyzb-eNw" base_Package="_Nl79kFqoEeerLcIyzb-eNw"/>
+  <UMLRealTime:RTMessageSet xmi:id="_Nm4_0FqoEeerLcIyzb-eNw" base_Interface="_Nm0uYFqoEeerLcIyzb-eNw"/>
+  <UMLRealTime:RTMessageSet xmi:id="_NnFNEFqoEeerLcIyzb-eNw" base_Interface="_NnAUkFqoEeerLcIyzb-eNw" rtMsgKind="out"/>
+  <UMLRealTime:RTMessageSet xmi:id="_NnPlIFqoEeerLcIyzb-eNw" base_Interface="_NnKFkFqoEeerLcIyzb-eNw" rtMsgKind="inOut"/>
+  <UMLRealTime:CapsulePart xmi:id="_hISaIKiMEee4O9DhtUkFUQ" base_Property="_hIBUYKiMEee4O9DhtUkFUQ"/>
+  <UMLRealTime:CapsulePart xmi:id="_i57W4KiMEee4O9DhtUkFUQ" base_Property="_i53sgKiMEee4O9DhtUkFUQ"/>
+  <UMLRealTime:CapsulePart xmi:id="_koOEsKiMEee4O9DhtUkFUQ" base_Property="_koLocKiMEee4O9DhtUkFUQ"/>
+  <UMLRealTime:CapsulePart xmi:id="_mbW2QKiMEee4O9DhtUkFUQ" base_Property="_mbTy8KiMEee4O9DhtUkFUQ"/>
+  <UMLRealTime:RTPort xmi:id="_rXjDcKiMEee4O9DhtUkFUQ" isPublish="false" isWired="true" base_Port="_rXeyAKiMEee4O9DhtUkFUQ"/>
+  <UMLRealTime:RTPort xmi:id="_wD4PsKiMEee4O9DhtUkFUQ" isPublish="false" isWired="true" base_Port="_wD1MYKiMEee4O9DhtUkFUQ"/>
+  <UMLRealTime:RTPort xmi:id="_1AD10KiMEee4O9DhtUkFUQ" isPublish="false" isWired="true" base_Port="_1ABZkKiMEee4O9DhtUkFUQ"/>
+  <UMLRealTime:RTPort xmi:id="_3YRDUKiMEee4O9DhtUkFUQ" isPublish="false" isWired="true" base_Port="_3YOAAKiMEee4O9DhtUkFUQ"/>
+  <UMLRealTime:CapsulePart xmi:id="_wrd-sKiNEee4O9DhtUkFUQ" base_Property="_wrbicKiNEee4O9DhtUkFUQ"/>
+  <UMLRealTime:RTPort xmi:id="_cJNmIKiOEee4O9DhtUkFUQ" isPublish="false" isWired="true" base_Port="_cJLJ4KiOEee4O9DhtUkFUQ"/>
+  <UMLRealTime:RTPort xmi:id="_eMMxkKiOEee4O9DhtUkFUQ" isPublish="false" isWired="true" base_Port="_eMK8YKiOEee4O9DhtUkFUQ"/>
+  <UMLRealTime:RTPort xmi:id="_gniyoKiOEee4O9DhtUkFUQ" isPublish="false" isWired="true" base_Port="_gngWYKiOEee4O9DhtUkFUQ"/>
+  <UMLRealTime:RTPort xmi:id="_iOAaIKiOEee4O9DhtUkFUQ" isPublish="false" isWired="true" base_Port="_iN-k8KiOEee4O9DhtUkFUQ"/>
+  <UMLRealTime:RTConnector xmi:id="_ksHbUKiOEee4O9DhtUkFUQ" base_Connector="_ksEYAKiOEee4O9DhtUkFUQ"/>
+  <UMLRealTime:RTConnector xmi:id="_laF7oqiOEee4O9DhtUkFUQ" base_Connector="_laEGcKiOEee4O9DhtUkFUQ"/>
+  <UMLRealTime:RTConnector xmi:id="_mPR3MaiOEee4O9DhtUkFUQ" base_Connector="_mPPa8KiOEee4O9DhtUkFUQ"/>
+  <UMLRealTime:RTConnector xmi:id="_m19csKiOEee4O9DhtUkFUQ" base_Connector="_m17ngKiOEee4O9DhtUkFUQ"/>
+  <UMLRealTime:RTConnector xmi:id="_LLdZoqiQEee4O9DhtUkFUQ" base_Connector="_LLbkcKiQEee4O9DhtUkFUQ"/>
+  <UMLRealTime:RTConnector xmi:id="_MEX-oqiQEee4O9DhtUkFUQ" base_Connector="_MEWJcKiQEee4O9DhtUkFUQ"/>
+  <UMLRealTime:RTConnector xmi:id="_MzNakqiQEee4O9DhtUkFUQ" base_Connector="_MzMMcKiQEee4O9DhtUkFUQ"/>
+  <UMLRealTime:RTConnector xmi:id="_Nn3KoqiQEee4O9DhtUkFUQ" base_Connector="_Nn1VcKiQEee4O9DhtUkFUQ"/>
+  <UMLRTStateMachines:RTState xmi:id="_S3h4AKiREee4O9DhtUkFUQ" base_State="_S3fbwKiREee4O9DhtUkFUQ"/>
+  <UMLRTStateMachines:RTRegion xmi:id="_TcUnIKiREee4O9DhtUkFUQ" base_Region="_TcRj0KiREee4O9DhtUkFUQ"/>
+  <UMLRTStateMachines:RTState xmi:id="_ah3GcKiREee4O9DhtUkFUQ" base_State="_ah14UKiREee4O9DhtUkFUQ"/>
+  <UMLRTStateMachines:RTState xmi:id="_fPKjEKiREee4O9DhtUkFUQ" base_State="_fPJU8KiREee4O9DhtUkFUQ"/>
+  <UMLRTStateMachines:RTState xmi:id="_jUCGsKiREee4O9DhtUkFUQ" base_State="_jUARgKiREee4O9DhtUkFUQ"/>
+  <UMLRTStateMachines:RTState xmi:id="_tEoeEKiREee4O9DhtUkFUQ" base_State="_tEnP8KiREee4O9DhtUkFUQ"/>
+  <UMLRTStateMachines:RTState xmi:id="_wO4zkKiREee4O9DhtUkFUQ" base_State="_wO3lcKiREee4O9DhtUkFUQ"/>
+  <UMLRTStateMachines:RTPseudostate xmi:id="_N7AowKiTEee4O9DhtUkFUQ" base_Pseudostate="_N6_aoKiTEee4O9DhtUkFUQ"/>
+  <UMLRTStateMachines:RTPseudostate xmi:id="_dSHVoKiTEee4O9DhtUkFUQ" base_Pseudostate="_dSFgcKiTEee4O9DhtUkFUQ"/>
+  <UMLRTStateMachines:RTPseudostate xmi:id="_1h5TYKiTEee4O9DhtUkFUQ" base_Pseudostate="_1h3eMKiTEee4O9DhtUkFUQ"/>
+  <UMLRTStateMachines:RTState xmi:id="_STYsUKiVEee4O9DhtUkFUQ" base_State="_STW3IKiVEee4O9DhtUkFUQ"/>
+  <UMLRTStateMachines:RTPseudostate xmi:id="_-9dkAKiVEee4O9DhtUkFUQ" base_Pseudostate="_-9cV4KiVEee4O9DhtUkFUQ"/>
+  <UMLRTStateMachines:RTState xmi:id="_my-yAK3wEee4O9DhtUkFUQ" base_State="_my9j4K3wEee4O9DhtUkFUQ"/>
+  <UMLRTStateMachines:RTState xmi:id="_0kBgAK3wEee4O9DhtUkFUQ" base_State="_0kAR4K3wEee4O9DhtUkFUQ"/>
+  <UMLRTStateMachines:RTState xmi:id="_bqBrIK3xEee4O9DhtUkFUQ" base_State="_bqAdAK3xEee4O9DhtUkFUQ"/>
+  <UMLRealTime:RTPort xmi:id="_z-xdAK7kEeeE8pdumv3XjQ" isPublish="false" isWired="true" base_Port="_z-jakK7kEeeE8pdumv3XjQ"/>
+  <UMLRealTime:RTPort xmi:id="_GWnXAK7lEeeE8pdumv3XjQ" isPublish="false" isWired="true" base_Port="_GWkTsK7lEeeE8pdumv3XjQ"/>
+  <UMLRealTime:CapsulePart xmi:id="_Qb6MAK7lEeeE8pdumv3XjQ" base_Property="_Qb3IsK7lEeeE8pdumv3XjQ"/>
+  <UMLRealTime:RTPort xmi:id="_XIbuYK7lEeeE8pdumv3XjQ" isPublish="false" isWired="true" base_Port="_XIZSIK7lEeeE8pdumv3XjQ"/>
+  <UMLRealTime:RTConnector xmi:id="_Z_5DsK7lEeeE8pdumv3XjQ" base_Connector="_Z_1ZUK7lEeeE8pdumv3XjQ"/>
+  <UMLRealTime:RTConnector xmi:id="_fyLyca7lEeeE8pdumv3XjQ" base_Connector="_fyJWMK7lEeeE8pdumv3XjQ"/>
+</xmi:XMI>

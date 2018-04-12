@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:UMLRTStateMachines="http://www.eclipse.org/papyrus/umlrt/statemachine" xmlns:UMLRealTime="http://www.eclipse.org/papyrus/umlrt" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Package xmi:id="_2bd4wJ5YEeeixtfOAUlJBw" name="Camera">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_2bd4wZ5YEeeixtfOAUlJBw" source="http://www.eclipse.org/papyrus-rt/language/1.0.0">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_2bd4wp5YEeeixtfOAUlJBw" key="language" value="umlrt-cpp"/>
+    </eAnnotations>
+    <packagedElement xmi:type="uml:Package" xmi:id="_6Q__4J5YEeeixtfOAUlJBw" name="cameraSensing">
+      <packagedElement xmi:type="uml:Collaboration" xmi:id="_6PI-sJ5YEeeixtfOAUlJBw" name="cameraSensing">
+        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_6RFfcJ5YEeeixtfOAUlJBw" client="_6PI-sJ5YEeeixtfOAUlJBw" supplier="_6RDDMJ5YEeeixtfOAUlJBw" contract="_6RDDMJ5YEeeixtfOAUlJBw"/>
+        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_6RNbQJ5YEeeixtfOAUlJBw" client="_6PI-sJ5YEeeixtfOAUlJBw" supplier="_6RLmEZ5YEeeixtfOAUlJBw" contract="_6RLmEZ5YEeeixtfOAUlJBw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_6RDDMJ5YEeeixtfOAUlJBw" name="cameraSensing">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_WHV0oJ5ZEeeixtfOAUlJBw" name="straightPathDetected">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_i0utQJ5ZEeeixtfOAUlJBw" name="value">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_6RJJ0J5YEeeixtfOAUlJBw" name="cameraSensing~">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_JIv3QJ5ZEeeixtfOAUlJBw" name="startCameraSensing"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_MsK6sJ5ZEeeixtfOAUlJBw" name="stopCameraSensing"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_6RK_AJ5YEeeixtfOAUlJBw" client="_6PI-sJ5YEeeixtfOAUlJBw" supplier="_6RJJ0J5YEeeixtfOAUlJBw"/>
+      <packagedElement xmi:type="uml:AnyReceiveEvent" xmi:id="_6RLmEJ5YEeeixtfOAUlJBw" name="*"/>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_6RLmEZ5YEeeixtfOAUlJBw" name="cameraSensingIO"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_6RNbQZ5YEeeixtfOAUlJBw" client="_6PI-sJ5YEeeixtfOAUlJBw" supplier="_6RLmEZ5YEeeixtfOAUlJBw"/>
+      <packagedElement xmi:type="uml:CallEvent" xmi:id="_JIyTgJ5ZEeeixtfOAUlJBw" operation="_JIv3QJ5ZEeeixtfOAUlJBw"/>
+      <packagedElement xmi:type="uml:CallEvent" xmi:id="_MsLhwJ5ZEeeixtfOAUlJBw" operation="_MsK6sJ5ZEeeixtfOAUlJBw"/>
+      <packagedElement xmi:type="uml:CallEvent" xmi:id="_WHXCwJ5ZEeeixtfOAUlJBw" operation="_WHV0oJ5ZEeeixtfOAUlJBw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_BfeYwJ5ZEeeixtfOAUlJBw" name="CameraSensor" classifierBehavior="_z2Q7oJ5ZEeeixtfOAUlJBw" isActive="true">
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_LARkIJ5aEeeixtfOAUlJBw" name="camera" visibility="public" type="_6PI-sJ5YEeeixtfOAUlJBw" isOrdered="true" aggregation="composite" isBehavior="true" isConjugated="true" isService="true"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_niRlAJ5aEeeixtfOAUlJBw" name="timing" visibility="protected" isOrdered="true" aggregation="composite" isBehavior="true" isService="false">
+        <type xmi:type="uml:Collaboration" href="pathmap://UMLRTRTSLIB/UMLRT-RTS.uml#_MxQZgGXsEeS_4daqvwyFrg"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_qDchQJ5aEeeixtfOAUlJBw" name="log" visibility="protected" isOrdered="true" aggregation="composite" isBehavior="true" isService="false">
+        <type xmi:type="uml:Collaboration" href="pathmap://UMLRTRTSLIB/UMLRT-RTS.uml#_6kIb0IeXEeSVyrlWP4nYew"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_6ZlJcJ_fEeeixtfOAUlJBw" name="cameraPin" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_AR3W0NL2Eeez2Pnj8VbWZQ" value="10"/>
+      </ownedAttribute>
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_z2Q7oJ5ZEeeixtfOAUlJBw" name="CameraSensorStateMachine" isReentrant="false">
+        <region xmi:type="uml:Region" xmi:id="_z2Q7oZ5ZEeeixtfOAUlJBw" name="Region">
+          <transition xmi:type="uml:Transition" xmi:id="_z2asoJ5ZEeeixtfOAUlJBw" name="Initial" source="_z2Q7op5ZEeeixtfOAUlJBw" target="_z2Q7pJ5ZEeeixtfOAUlJBw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_uK9B0J5dEeeixtfOAUlJBw" kind="external" source="_z2Q7pJ5ZEeeixtfOAUlJBw" target="_yw7ZUJ5bEeeixtfOAUlJBw">
+            <trigger xmi:type="uml:Trigger" xmi:id="_vca-0J5fEeeixtfOAUlJBw" name="startCameraSensing" event="_JIyTgJ5ZEeeixtfOAUlJBw" port="_LARkIJ5aEeeixtfOAUlJBw"/>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_w5mZYJ5dEeeixtfOAUlJBw" kind="external" source="_yw7ZUJ5bEeeixtfOAUlJBw" target="_z2Q7pJ5ZEeeixtfOAUlJBw">
+            <trigger xmi:type="uml:Trigger" xmi:id="_81LvsJ5fEeeixtfOAUlJBw" name="stopCameraSensing" event="_MsLhwJ5ZEeeixtfOAUlJBw" port="_LARkIJ5aEeeixtfOAUlJBw"/>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_u4n4wJ5gEeeixtfOAUlJBw" kind="external" source="_yw7ZUJ5bEeeixtfOAUlJBw" target="_yw7ZUJ5bEeeixtfOAUlJBw">
+            <trigger xmi:type="uml:Trigger" xmi:id="_AUpDsJ5hEeeixtfOAUlJBw" name="timeout" port="_niRlAJ5aEeeixtfOAUlJBw">
+              <event xmi:type="uml:CallEvent" href="pathmap://UMLRTRTSLIB/UMLRT-RTS.uml#_IaEO8HDxEeSwWKwNKw1iAA"/>
+            </trigger>
+          </transition>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_z2Q7op5ZEeeixtfOAUlJBw" kind="initial"/>
+          <subvertex xmi:type="uml:State" xmi:id="_z2Q7pJ5ZEeeixtfOAUlJBw" name="Idle"/>
+          <subvertex xmi:type="uml:State" xmi:id="_yw7ZUJ5bEeeixtfOAUlJBw" name="Active">
+            <entry xmi:type="uml:OpaqueBehavior" xmi:id="_-iRHIJ5gEeeixtfOAUlJBw" name="Entry">
+              <language>C++</language>
+              <body>&#xD;
+if(digitalRead(cameraPin) == HIGH)&#xD;
+{&#xD;
+    camera.straightPathDetected(true).send();&#xD;
+&#xD;
+}&#xD;
+else&#xD;
+{&#xD;
+camera.straightPathDetected(false).send();&#xD;
+}&#xD;
+&#xD;
+timerId = timer.informIn(UMLRTTimespec(0,frequency*1000000));</body>
+            </entry>
+          </subvertex>
+        </region>
+      </ownedBehavior>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_2bd4w55YEeeixtfOAUlJBw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_2bd4xJ5YEeeixtfOAUlJBw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/umlrt#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_RT_PROFILE/uml-rt.profile.uml#_1h74oEeVEeO0lv5O1DTHOQ"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_2bd4xZ5YEeeixtfOAUlJBw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_2bd4xp5YEeeixtfOAUlJBw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/umlrt/statemachine#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_RT_PROFILE/UMLRealTimeSM-addendum.profile.uml#_KLcn0FDtEeOA4ecmvfqvaw"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_2bd4x55YEeeixtfOAUlJBw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_2bd4yJ5YEeeixtfOAUlJBw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/umlrt/cppproperties#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UMLRT_CPP/RTCppProperties.profile.uml#_vl5LALs8EeSTjNEQkASznQ"/>
+    </profileApplication>
+  </uml:Package>
+  <UMLRealTime:ProtocolContainer xmi:id="_6RB1EJ5YEeeixtfOAUlJBw" base_Package="_6Q__4J5YEeeixtfOAUlJBw"/>
+  <UMLRealTime:RTMessageSet xmi:id="_6RE4YJ5YEeeixtfOAUlJBw" base_Interface="_6RDDMJ5YEeeixtfOAUlJBw"/>
+  <UMLRealTime:RTMessageSet xmi:id="_6RKX8J5YEeeixtfOAUlJBw" base_Interface="_6RJJ0J5YEeeixtfOAUlJBw" rtMsgKind="out"/>
+  <UMLRealTime:RTMessageSet xmi:id="_6RM0MJ5YEeeixtfOAUlJBw" base_Interface="_6RLmEZ5YEeeixtfOAUlJBw" rtMsgKind="inOut"/>
+  <UMLRealTime:Protocol xmi:id="_6ROCUJ5YEeeixtfOAUlJBw" base_Collaboration="_6PI-sJ5YEeeixtfOAUlJBw"/>
+  <UMLRealTime:Capsule xmi:id="_Bfj4UJ5ZEeeixtfOAUlJBw" base_Class="_BfeYwJ5ZEeeixtfOAUlJBw"/>
+  <UMLRTStateMachines:RTPseudostate xmi:id="_z2Q7o55ZEeeixtfOAUlJBw" base_Pseudostate="_z2Q7op5ZEeeixtfOAUlJBw"/>
+  <UMLRTStateMachines:RTState xmi:id="_z2aFkJ5ZEeeixtfOAUlJBw" base_State="_z2Q7pJ5ZEeeixtfOAUlJBw"/>
+  <UMLRTStateMachines:RTRegion xmi:id="_z2asoZ5ZEeeixtfOAUlJBw" base_Region="_z2Q7oZ5ZEeeixtfOAUlJBw"/>
+  <UMLRTStateMachines:RTStateMachine xmi:id="_z2dI4J5ZEeeixtfOAUlJBw" base_StateMachine="_z2Q7oJ5ZEeeixtfOAUlJBw"/>
+  <UMLRealTime:RTPort xmi:id="_LARkIZ5aEeeixtfOAUlJBw" isPublish="false" isWired="true" base_Port="_LARkIJ5aEeeixtfOAUlJBw"/>
+  <UMLRealTime:RTPort xmi:id="_nivfEJ5aEeeixtfOAUlJBw" isPublish="false" isWired="false" base_Port="_niRlAJ5aEeeixtfOAUlJBw"/>
+  <UMLRealTime:RTPort xmi:id="_qDlrMJ5aEeeixtfOAUlJBw" isPublish="false" isWired="false" base_Port="_qDchQJ5aEeeixtfOAUlJBw"/>
+  <UMLRTStateMachines:RTState xmi:id="_yw9OgJ5bEeeixtfOAUlJBw" base_State="_yw7ZUJ5bEeeixtfOAUlJBw"/>
+</xmi:XMI>
